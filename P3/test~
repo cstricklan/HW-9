@@ -1,0 +1,42 @@
+Nx=23;
+Ny=132;
+buffer.xt= 0;
+buffer.yt= 23;
+dx=0.00032609;
+dy=0.00032609;
+
+% [m n]=size(rER);
+% cf.x = floor((Nx - buffer.xt)/m); % Conversion factor to convert our real grid to our numerical grid
+% cf.y = floor((Ny - buffer.yt)/n);
+% %Material Vectors
+% ER = zeros([1 Nz]);
+% UR = zeros([1 Nz]);
+%  
+% % We Need to lay our real materials vectors over our numerical material
+% % grid
+%  
+% % Lets place our real grid in proper location on numerical grid
+% for i = 0 : length(rER)-1
+%   index = buffer+2 + i*cf+1;
+% %  disp(['i: ' num2str(i) ' i2: ' num2str(index)]);
+%   ER(index) = rER(i+1);
+%   UR(index) = rUR(i+1);
+% end
+% 
+% 
+% 
+% % Need to backfill in our values
+% ER(1:buffer+2) = 1;
+% ER(length(ER)-buffer-1:length(UR)) = 1;
+% UR(1:buffer+2) = 1;
+% UR(length(UR)-buffer-1:length(UR)) = 1;
+%  
+% for i=buffer+2 : length(ER-buffer-1)
+%   if(ER(i) == 0)
+%     ER(i) = ER(i-1);
+%   end
+%   
+%   if(UR(i) == 0)
+%     UR(i) = UR(i-1);
+%   end
+% end
